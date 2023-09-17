@@ -1,14 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
     <body>
-        <h1>Edit Screen</h1>
-        <form action="index.html">
-            <input type="text" value="Gwendolyn Payne" />
-            <br />
-            <textarea>
-                Text area info...
-            </textarea>
-            <button>Save</button>
-        </form>
+        <table width="100%">
+            <tbody>
+                <tr valign="baseline">
+                    <td>
+                        <ul>
+                            <li><a href="/kanbas/profile/index.html">Account</a></li>
+                            <li><a href="#">Dashboard</a></li>
+                            <li><a href="/kanbas/home.html">Courses</a></li>
+                            <li><a href="#">Calendar</a></li>
+                            <li><a href="#">Inbox</a></li>
+                            <li><a href="#">History</a></li>
+                            <li><a href="#">Studio</a></li>
+                            <li><a href="#">Commons</a></li>
+                            <li><a href="#">Help</a></li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li><a href="#">Notifications</a></li>
+                            <li><a href="index.html">Profile</a></li>
+                            <li><a href="#">Files</a></li>
+                            <li><a href="#">Settings</a></li>
+                            <li><a href="#">ePortfolios</a></li>
+                            <li><a href="#">Shared Content</a></li>
+                            <li><a href="#">The Hub</a></li>
+                            <li><a href="#">Qwickly Course Tools</a></li>
+                            <li><a href="#">Global Announcements</a></li>
+                        </ul>
+                    </td>
+                    <td>
+                        <h1>Gwendolyn Payne</h1>
+                        <form action="index.html">
+                            <label>Name:*</label>
+                            <input type="text" value="Gwendolyn Payne" />
+                            <label>Pronouns:</label>
+                            <select id="pronouns">
+                                <option value="she" selected>she/her</option>
+                                <option value="he">he/him</option>
+                                <option value="they">they/them</option>
+                            </select>
+                            <br /><br/>
+                            <label>Title:</label>
+                            <input type="text" value="Student" />
+                            <h3>Contact</h3>
+                            <p>No registered services, you can add some on the <a href="#">settings</a> page</p>
+                            <h3>Biography</h3>
+                            <textarea>Fifth year student and software engineer</textarea>
+                            <h3>Links</h3>
+                            <ul>
+                                <li><a href="#">Youtube</a></li>
+                            </ul>
+                            <label>Title</label>
+                            <input type="text" value="Youtube" /> -> 
+                            <label>URL</label>
+                            <input type="text" value="www.youtube.com" /> <a href="#">Remove</a>
+                            <br />
+                            <button>Add Another Link</button>
+                            <br /><br/>
+                            <button>Save Profile</button>
+                            <button>Cancel Editing</button>
+                        </form>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </body>
 </html>
