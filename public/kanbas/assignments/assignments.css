@@ -1,0 +1,17 @@
+.wd-green-border {
+    border-left: 5px solid green !important;
+}
+
+.wd-assignment-title {
+    color: black;
+    text-decoration: none;
+}
+.wd-assignment-title:hover {
+    color: crimson;
+    text-decoration: underline;
+}
+
+.wd-rounded-top-0 {
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+}

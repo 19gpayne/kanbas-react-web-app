@@ -1,0 +1,12 @@
+.btn-light {
+    border: 1px solid lightgray;
+    border-radius: 0.25rem;
+}
+
+.list-group {
+    border-radius: 0;
+}
+
+.list-group-item {
+    border-radius: 0;
+}

@@ -1,0 +1,15 @@
+.wd-grade-input {
+    outline: 1px solid crimson;
+    border-radius: 5px;
+    border: none;
+    text-align: center;
+}
+
+.wd-table-row-header {
+    color: crimson !important;
+    text-align: left;
+}
+
+.wd-table-fixed {
+    table-layout: fixed;
+}
