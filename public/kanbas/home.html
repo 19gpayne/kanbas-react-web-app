@@ -71,9 +71,9 @@
                     </a>
                 </div>
             </div>
-            <div class="col-11">
+            <div class="col-12 col-md-11">
                 <div class="row">
-                    <div class="col-12 p-4 pb-0">
+                    <div class="col-12 p-4 pb-0 d-none d-md-block">
                         <div class="d-flex align-items-center">
                             <i class="fa-solid fa-bars crimson fs-4"></i>
                             <nav class="ms-4" style="--bs-breadcrumb-divider: '>';">
@@ -85,11 +85,23 @@
                         </div>
                         <hr />
                     </div>
+                    <div class="col-12 p-4 pb-0 d-md-none bg-black text-white">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <a class="text-white" href="/kanbas/navigation/main.html"><i class="fa-solid fa-bars fs-4" role="button"></i></a>
+                            <div class="d-block text-center">
+                                CS4550.12345.9999
+                                <br />
+                                Home
+                            </div>   
+                            <a class="text-white" href="/kanbas/navigation/courses.html"><i class="fa-solid fa-angle-down fs-4" role="button"></i></a>
+                        </div>
+                        <hr />
+                    </div>
                 </div>
                 <div class="row">
                     <div class="col-md-2 d-none d-md-block">
-                        <ul class="course-navigation">
-                            <li><a href="/kanbas/home.html" class="selected">Home</a></li>
+                        <ul class="wd-sub-navigation">
+                            <li><a href="/kanbas/home.html" class="wd-sub-navigation-selected">Home</a></li>
                             <li><a href="#">Modules</a></li>
                             <li><a href="#">Piazza</a></li>
                             <li><a href="#">Zoom Meetings</a></li>
@@ -112,7 +124,7 @@
                     <div class="col-12 col-md-10 p-3">
                         <div class="row justify-content-around">
                             <div class="col-12 col-md-8">
-                                <div class="float-end">
+                                <div class="float-end text-end">
                                     <button class="btn btn-light">Collapse All</button>
                                     <button class="btn btn-light">View Progress</button>
                                     <div class="btn-group">
@@ -176,24 +188,24 @@
                                             <li class="list-group-item d-flex justify-content-between align-items-center">
                                                 <span>
                                                     <i class="fa-solid fa-grip-vertical text-secondary me-2"></i>
-                                                    <i class="fa-solid fa-link me-2"></i>
-                                                    <a class="styled-link" href="#">Introduction to Web Development</a>
+                                                    <i class="fa-solid fa-link text-success me-2"></i>
+                                                    <a class="wd-styled-link" href="#">Introduction to Web Development</a>
                                                 </span>
                                                 <span><i class="fa-solid fa-circle-check text-success me-3"></i> <i class="fa-solid fa-ellipsis-vertical text-secondary"></i></span>
                                             </li>
                                             <li class="list-group-item d-flex justify-content-between align-items-center">
                                                 <span>
                                                     <i class="fa-solid fa-grip-vertical text-secondary me-2"></i>
-                                                    <i class="fa-solid fa-link me-2"></i>
-                                                    <a class="styled-link" href="#">Creating an HTTPS server with Node.js</a>
+                                                    <i class="fa-solid fa-link text-success me-2"></i>
+                                                    <a class="wd-styled-link" href="#">Creating an HTTPS server with Node.js</a>
                                                 </span>
                                                 <span><i class="fa-solid fa-circle-check text-success me-3"></i> <i class="fa-solid fa-ellipsis-vertical text-secondary"></i></span>
                                             </li>
                                             <li class="list-group-item d-flex justify-content-between align-items-center">
                                                 <span>
                                                     <i class="fa-solid fa-grip-vertical text-secondary me-2"></i>
-                                                    <i class="fa-solid fa-link me-2"></i>
-                                                    <a class="styled-link" href="#">Creating a React Application</a>
+                                                    <i class="fa-solid fa-link text-success me-2"></i>
+                                                    <a class="wd-styled-link" href="#">Creating a React Application</a>
                                                 </span>
                                                 <span><i class="fa-solid fa-circle-check text-success me-3"></i> <i class="fa-solid fa-ellipsis-vertical text-secondary"></i></span>
                                             </li>
@@ -240,24 +252,24 @@
                                             <li class="list-group-item d-flex justify-content-between align-items-center">
                                                 <span>
                                                     <i class="fa-solid fa-grip-vertical text-secondary me-2"></i>
-                                                    <i class="fa-solid fa-link me-2"></i>
-                                                    <a class="styled-link" href="#">Deploy the assignment to Netlify</a>
+                                                    <i class="fa-solid fa-link text-success me-2"></i>
+                                                    <a class="wd-styled-link" href="#">Deploy the assignment to Netlify</a>
                                                 </span>
                                                 <span><i class="fa-solid fa-circle-check text-success me-3"></i> <i class="fa-solid fa-ellipsis-vertical text-secondary"></i></span>
                                             </li>
                                             <li class="list-group-item d-flex justify-content-between align-items-center">
                                                 <span>
                                                     <i class="fa-solid fa-grip-vertical text-secondary me-2"></i>
-                                                    <i class="fa-solid fa-link me-2"></i>
-                                                    <a class="styled-link" href="#">Creating an HTTPS server with Node.js</a>
+                                                    <i class="fa-solid fa-link text-success me-2"></i>
+                                                    <a class="wd-styled-link" href="#">Creating an HTTPS server with Node.js</a>
                                                 </span>
                                                 <span><i class="fa-solid fa-circle-check text-success me-3"></i> <i class="fa-solid fa-ellipsis-vertical text-secondary"></i></span>
                                             </li>
                                             <li class="list-group-item d-flex justify-content-between align-items-center">
                                                 <span>
                                                     <i class="fa-solid fa-grip-vertical text-secondary me-2"></i>
-                                                    <i class="fa-solid fa-link me-2"></i>
-                                                    <a class="styled-link" href="#">Creating a React Application</a>
+                                                    <i class="fa-solid fa-link text-success me-2"></i>
+                                                    <a class="wd-styled-link" href="#">Creating a React Application</a>
                                                 </span>
                                                 <span><i class="fa-solid fa-circle-check text-success me-3"></i> <i class="fa-solid fa-ellipsis-vertical text-secondary"></i></span>
                                             </li>
@@ -278,13 +290,50 @@
                                     <li class="list-group-item list-group-item-secondary">View Course Notifications</li>
                                 </ul>
                                 <br />
-                                <h5>Coming Up</h5>
-                                <a class="styled-link" href="#">View Calendar</a>
-                                <ul>
-                                    <li><a class="styled-link" href="#">Lecture CS4550 Sep 7 at 11:45am</a></li>
-                                    <li><a class="styled-link" href="#">Lecture CS4550 Sep 11 at 11:45am</a></li>
-                                    <li><a class="styled-link" href="#">Lecture CS5610 Sep 11 at 6pm</a></li>
-                                </ul>
+                                
+                                <h5>To Do</h5>
+                                <hr />
+                                <div class="d-flex justify-content-between align-items-baseline wd-font-xxs">
+                                    <span class="badge rounded-pill text-bg-danger">1</span>
+                                    <div>
+                                        <a class="wd-styled-link" href="#">Grade A1 - ENV + HTML</a>
+                                        <p class="text-secondary">100 points | Sep 18 at 11:59pm</p>
+                                    </div>
+                                    <i class="fa-solid fa-x text-secondary"></i>
+                                </div>
+
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h5 class="mb-0">Coming Up</h5>
+                                    <span class="text-secondary me-3 wd-font-xxs">
+                                        <i class="fa-regular fa-calendar"></i>
+                                        <a class="wd-styled-link" href="#">View Calendar</a>
+                                    </span>
+                                </div>
+                                <hr/>
+                                <div class="d-flex align-items-baseline wd-font-xxs">
+                                    <span class="text-secondary me-3"><i class="fa-regular fa-calendar"></i></span>
+                                    <div>
+                                        <a class="wd-styled-link" href="#">Lecture</a>
+                                        <p class="text-secondary mb-0">CS4550.12345.202410</p>
+                                        <p class="text-secondary">Sep 7 at 11:45am</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-baseline wd-font-xxs">
+                                    <span class="text-secondary me-3"><i class="fa-regular fa-calendar"></i></span>
+                                    <div>
+                                        <a class="wd-styled-link" href="#">Lecture</a>
+                                        <p class="text-secondary mb-0">CS4550.12345.202410</p>
+                                        <p class="text-secondary">Sep 11 at 11:45am</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-baseline wd-font-xxs">
+                                    <span class="text-secondary me-3"><i class="fa-regular fa-calendar"></i></span>
+                                    <div>
+                                        <a class="wd-styled-link" href="#">Lecture</a>
+                                        <p class="text-secondary mb-0">CS56100.12345.202410</p>
+                                        <p class="text-secondary">Sep 11 at 6pm</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

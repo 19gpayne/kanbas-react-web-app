@@ -63,3 +63,7 @@
     border-left: 3px solid black;
     padding-left: 8px;
 }
+
+.wd-font-xxs {
+    font-size: 12px;
+}
