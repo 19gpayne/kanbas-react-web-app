@@ -1,0 +1,13 @@
+.wd-sub-navigation {
+    color: crimson;
+    text-decoration: none;
+    display: block;
+}
+.wd-sub-navigation:hover {
+    text-decoration: underline;
+}
+.wd-sub-navigation.active {
+    color: black;
+    border-left: 2px solid black;
+    padding-left: 3px;
+}

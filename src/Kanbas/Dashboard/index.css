@@ -1,0 +1,13 @@
+.wd-course-title {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: steelblue !important;
+    text-decoration: none;
+    cursor: pointer !important;
+}
+
+.wd-course-title:hover {
+    color: steelblue;
+    text-decoration: underline;
+}

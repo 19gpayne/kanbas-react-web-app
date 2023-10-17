@@ -1,0 +1,8 @@
+.wd-styled-link {
+    color: crimson;
+    text-decoration: none;
+}
+.wd-styled-link:hover {
+    color: crimson;
+    text-decoration: underline;
+}

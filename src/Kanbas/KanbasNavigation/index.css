@@ -1,0 +1,13 @@
+.wd-navigation {
+    text-align: center;
+    padding: 5px;
+    font-size: 14px;
+    background-color: black;
+    cursor: pointer;
+}
+.wd-navigation-active {
+    background-color: white !important;
+}
+.wd-navigation-link {
+    text-decoration: none;
+}
