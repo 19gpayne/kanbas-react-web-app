@@ -9,7 +9,7 @@ function ModuleList() {
   const modules = db.modules;
   return (
     <>
-      <div className="float-end text-end d-flex gap-1">
+      <div className="float-end text-end d-flex gap-1 flex-wrap">
         <button className="btn btn-light">Collapse All</button>
         <button className="btn btn-light">View Progress</button>
         <div className="btn-group">

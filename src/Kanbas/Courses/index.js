@@ -14,11 +14,11 @@ function Courses() {
   const course = db.courses.find((course) => course._id === courseId);
   const { pathname } = useLocation();
   return (
-    <div className="px-4">
+    <div className="px-md-4">
         <Breadcrumb course={course} pathname={pathname}/>
         <div className="row">
-            <div className="col-2"><CourseNavigation /></div>
-            <div className="col-10">
+            <div className="d-none d-md-block col-2"><CourseNavigation /></div>
+            <div className="col-12 col-md-10">
                 <Routes>
                     <Route path="/" element={<Navigate to="Home" />} />
                     <Route path="Home" element={<Home />}/>
