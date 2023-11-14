@@ -7,7 +7,8 @@ import React, { useState, useEffect } from "react";
 import store from "./store";
 import { Provider } from "react-redux";
 
-export const URL = "http://localhost:4000/api/courses";
+const API_BASE = process.env.REACT_APP_API_BASE;
+export const URL = `${API_BASE}/courses`;
 
 function Kanbas() {
   const [courses, setCourses] = useState([]);
