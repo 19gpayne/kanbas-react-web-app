@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { FaCheckCircle, FaEllipsisV, FaGripVertical, FaPlus, FaTrashAlt, FaPen } from "react-icons/fa";
 import "../../custom.css"
@@ -8,7 +8,10 @@ import {
   deleteModule,
   updateModule,
   setModule,
+  setModules,
 } from "./modulesReducer";
+import { findModulesForCourse, createModule } from "./client";
+import * as client from "./client"
 
 function ModuleList() {
   const { courseId } = useParams();
@@ -23,14 +26,34 @@ function ModuleList() {
     setShowEditModule(false);
     dispatch(setModule({name: "", description: ""}));
   }
+  const handleAddModule = () => {
+    createModule(courseId, module).then((module) => {
+      dispatch(addModule(module));
+    });
+  };
+  const handleDeleteModule = (moduleId) => {
+    client.deleteModule(moduleId).then((status) => {
+      dispatch(deleteModule(moduleId));
+    });
+  };
+  const handleUpdateModule = async () => {
+    const status = await client.updateModule(module);
+    dispatch(updateModule(module));
+  };
   const onSaveModule = () => {
     if (isEditing) {
-      dispatch(updateModule({ ...module, course: courseId }));
+      handleUpdateModule();
     } else {
-      dispatch(addModule({ ...module, course: courseId }));
+      handleAddModule()
     }
     resetModule();
   }
+  useEffect(() => {
+    findModulesForCourse(courseId)
+      .then((modules) => {dispatch(setModules(modules))}
+    );
+  }, [courseId]);
+
   return (
     <>
       <div className="float-end text-end d-flex gap-1 flex-wrap">
@@ -76,7 +99,7 @@ function ModuleList() {
             :
             courseModules
               .map((module, index) => (
-                <li className="list-group-item list-group-item-secondary gap-2 mb-4 d-flex justify-content-between align-items-center">
+                <li key={`${module._id}${index}`} className="list-group-item list-group-item-secondary gap-2 mb-4 d-flex justify-content-between align-items-center">
                   <div className="d-flex align-items-center">
                     <span><FaGripVertical /></span>
                     <div className="ms-2">
@@ -86,7 +109,7 @@ function ModuleList() {
                   </div>
                   <span className="d-flex gap-2">
                     <FaPen onClick={() => {dispatch(setModule(module)); setShowEditModule(true); setIsEditing(true)}} role="button"/>
-                    <FaTrashAlt onClick={() => dispatch(deleteModule(module._id))} role="button"/>
+                    <FaTrashAlt onClick={() => handleDeleteModule(module._id)} role="button"/>
                     <FaEllipsisV />
                   </span>
               </li>

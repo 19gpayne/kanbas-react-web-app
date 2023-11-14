@@ -7,11 +7,24 @@ import Home from "./Home";
 import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/AssignmentsEditor"
 import Grades from "./Grades";
+import { useState, useEffect } from "react";
+import axios from "axios";
+import {URL} from "../index"
 
-function Courses({courses}) {
+function Courses() {
   const { courseId } = useParams();
-  const course = courses.find((course) => course._id === courseId);
   const { pathname } = useLocation();
+  const [course, setCourse] = useState({});
+  const findCourseById = async (courseId) => {
+    const response = await axios.get(
+      `${URL}/${courseId}`
+    );
+    setCourse(response.data);
+  };
+  useEffect(() => {
+    findCourseById(courseId);
+  }, [courseId]);
+
   return (
     <div className="px-md-4">
         <Breadcrumb course={course} pathname={pathname}/>

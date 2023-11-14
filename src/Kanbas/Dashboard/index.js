@@ -10,7 +10,7 @@ function Dashboard({ courses, showCourseForm, setShowCourseForm, course, setCour
         <h3 className="ms-4">Published Courses (3)</h3>
         <button onClick={() => {setShowCourseForm(true)}} className="btn btn-danger me-4">Add</button>
       </div>
-      {showCourseForm ?
+      {showCourseForm &&
         <div className="mx-4">
           <hr />
           <input value={course.name} className="form-control mb-3 w-75"
@@ -27,10 +27,11 @@ function Dashboard({ courses, showCourseForm, setShowCourseForm, course, setCour
             <button className="btn btn-danger" onClick={updateCourse}>Save</button>
           </div>
         </div>
-        :
+      }
+      {!showCourseForm &&
         <div className="d-flex flew-row flex-wrap gap-4 ms-4">
-          {courses.map((course) => (
-            <Link key={course._id} to={`/Kanbas/Courses/${course._id}`} className="list-group-item">
+          {courses.map((course, index) => (
+            <Link key={`${course._id}${index}`} to={`/Kanbas/Courses/${course._id}`} className="list-group-item">
               <DashboardCard 
                 _id={course._id} 
                 name={course.name} 
