@@ -6,16 +6,14 @@ import axios from "axios";
 import React, { useState, useEffect } from "react";
 import store from "./store";
 import { Provider } from "react-redux";
-
-const API_BASE = process.env.REACT_APP_API_BASE;
-export const URL = `${API_BASE}/courses`;
+import { COURSES_URL } from "./Courses/Modules/client";
 
 function Kanbas() {
   const [courses, setCourses] = useState([]);
   const [showCourseForm, setShowCourseForm] = useState(false);
   const [isEditing, setIsEditing] = useState(false);
   const findAllCourses = async () => {
-    const response = await axios.get(URL);
+    const response = await axios.get(COURSES_URL);
     setCourses(response.data);
   };
   useEffect(() => {
@@ -31,7 +29,7 @@ function Kanbas() {
     setCourses([...courses, { ...course, _id: new Date().getTime().toString() }]);
   };
   const addCourse = async () => {
-    const response = await axios.post(URL, course);
+    const response = await axios.post(COURSES_URL, course);
     setCourses([
       response.data,
       ...courses,
@@ -47,7 +45,7 @@ function Kanbas() {
   // };
   const deleteCourse = async (courseId) => {
     const response = await axios.delete(
-      `${URL}/${courseId}`
+      `${COURSES_URL}/${courseId}`
     );
     setCourses(courses.filter((course) => course._id !== courseId));
   };
@@ -61,7 +59,7 @@ function Kanbas() {
   const updateCourse = async () => {
     if (isEditing) {  
       const response = await axios.put(
-        `${URL}/${course._id}`,
+        `${COURSES_URL}/${course._id}`,
         course
       );
       setCourses(

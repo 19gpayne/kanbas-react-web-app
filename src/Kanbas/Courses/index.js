@@ -9,7 +9,7 @@ import AssignmentEditor from "./Assignments/AssignmentsEditor"
 import Grades from "./Grades";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import {URL} from "../index"
+import {COURSES_URL} from "./Modules/client"
 
 function Courses() {
   const { courseId } = useParams();
@@ -17,7 +17,7 @@ function Courses() {
   const [course, setCourse] = useState({});
   const findCourseById = async (courseId) => {
     const response = await axios.get(
-      `${URL}/${courseId}`
+      `${COURSES_URL}/${courseId}`
     );
     setCourse(response.data);
   };
