@@ -9,13 +9,17 @@ import {
     FaClock,
     FaTv,
     FaShareSquare,
-    FaRegQuestionCircle
+    FaRegQuestionCircle,
+    FaSignInAlt,
+    FaUpload
 } from "react-icons/fa";
 import "./index.css";
 import "../index.css"
 
 function KanbasNavigation() {
   const links = [
+        {label: "Signin", icon: <FaSignInAlt size={35} />},
+        {label: "Signup", icon: <FaUpload size={35} />},
         {label: "Account", icon: <FaRegUserCircle size={35} />}, 
         {label: "Dashboard", icon: <FaRegCompass size={28} />},
         {label: "Courses", icon: <FaBook size={28} />},

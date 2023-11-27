@@ -7,13 +7,17 @@ import React, { useState, useEffect } from "react";
 import store from "./store";
 import { Provider } from "react-redux";
 import { COURSES_URL } from "./Courses/Modules/client";
+import Signin from "./users/signin";
+import Account from "./users/account";
+import UserTable from "./users/table";
+import Signup from "./users/signup";
 
 function Kanbas() {
   const [courses, setCourses] = useState([]);
   const [showCourseForm, setShowCourseForm] = useState(false);
   const [isEditing, setIsEditing] = useState(false);
   const findAllCourses = async () => {
-    const response = await axios.get(COURSES_URL);
+    const response = await axios.get(COURSES_URL); 
     setCourses(response.data);
   };
   useEffect(() => {
@@ -83,7 +87,7 @@ function Kanbas() {
         <div className="mt-md-3 col-12 col-md-10 col-lg-11">
           <Routes>
             <Route path="/" element={<Navigate to="Dashboard" />} />
-            <Route path="Account" element={<h1>Account</h1>} />
+            <Route path="Account/:id?" element={<Account />} />
             <Route path="Dashboard" element={
               <Dashboard 
                 courses={courses}
@@ -98,6 +102,9 @@ function Kanbas() {
               />
             } />
             <Route path="Courses/:courseId/*" element={<Courses courses={courses} />} />
+            <Route path="/signin" element={<Signin />} />
+            <Route path="/signup" element={<Signup />} />
+            <Route path="/admin/users" element={<UserTable />} />
           </Routes>
         </div>
       </div>
