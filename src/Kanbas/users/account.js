@@ -7,7 +7,10 @@ function Account() {
     const [account, setAccount] = useState(null);
     const navigate = useNavigate();
     const fetchAccount = async () => {
-        const account = await client.account();
+        const account = await client.account()
+        .catch((err) => {
+            console.log(err)
+        });
         setAccount(account);
     };
     const save = async () => {
@@ -78,6 +81,7 @@ function Account() {
             </button>
         </div>
       )}
+      {!account && <div>Please login</div>}
     </div>
   );
 }
